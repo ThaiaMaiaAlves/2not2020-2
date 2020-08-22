@@ -66,7 +66,7 @@ console.log(vetor1)
 // deve ir até uma posição ANTES do seu número de elementos (length)
 // i++ significa i = i + 1
 for (let i = 0; i < vetor1.length; i++) {
-    console.log(vetor[i])
+    console.log(vetor1[i])
 }
 
 console.log('--------------------------------------------------------')
