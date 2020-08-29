@@ -15,8 +15,11 @@
 
 */
 
+// "estadosNe" é um array, que nada mais é que um vetor, ou uma lista.
 let estadosNe = []
 
+//nome, sigla, area, populacao = chamamos de atributos
+//'Sergipe', 'SE', 21915.08 e 2278308 = chamamos de valor
 let estado1 = {
    nome: 'Sergipe',
    sigla: 'SE',
@@ -29,12 +32,14 @@ let estado2 = {
     sigla: 'AL',
     area: 27848.14,
     populacao: 3322820
+}
 
 let estado3 = {
     nome: 'Rio Grande do Norte',
     sigla: 'RN',
     area: 52811.05,
-    populacao: 3479010 
+    populacao: 3479010
+}
   
 let estado4 = {
     nome: 'Paraíba',
@@ -84,6 +89,11 @@ estadosNe.push(estado4)
 estadosNe.push(estado5)
 estadosNe.push(estado6)
 estadosNe.push(estado7)
+estadosNe.push(estado8)
+estadosNe.push(estado9)
+
+console.log(estadosNe)
+
 
 
 /*
@@ -107,12 +117,27 @@ let densidade_demografica = (area, populacao) => populacao / area;
       Durante este mesmo loop, elimine a propriedade 'sigla' dos objetos.
 
 */
-
+// o "for" é usado para executar uma ação em cada posição de uma vetor, que isso aconteça um de cada vez.
+// densidadeDemograf é a minha variável
+// densidade_demografica é a minha função
+// estadosNe é o (Array) é o vetor
+// [i] é o índice que indica a posição do vetor
+// ".area" e ".populacao" são as propriedades do objeto estadosNe
+for (let i = 0; i < estadosNe.length; i++) {
+    let densidade = densidade_demografica (estadosNe[i].area, estadosNe[i].populacao)
+    estadosNe[i]['densidade demografica'] = densidade
+    delete estadosNe[i].sigla
+}
+    console.log(estadosNe);
+    
+    
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
+
+
 
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.

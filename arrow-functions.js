@@ -2,7 +2,7 @@
 
 // Função tradicional com 1 + argumentos
 let imc = function(peso, altura) {
-    return peso / altura ** 2)
+    return peso / altura ** 2
 }
 
 // Arrow function com 1+ argumento
@@ -21,7 +21,7 @@ console.log(imc2(87, 1.78))
 let fatorial = function(n) {
     let res = 1
     for(let i = n; 1 > 1; i--) {
-        res * = i
+        res *= i
     }
     return res
 }
@@ -31,7 +31,7 @@ let fatorial = function(n) {
 let fatorial2 = n => {
     let res = 1
     for(let i = n; i > 1; i--) {
-        res * = i
+        res *= i
     }
     return res
 }

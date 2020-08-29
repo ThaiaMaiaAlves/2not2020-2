@@ -5,7 +5,7 @@ let pessoa2 = new Object()   // étodo "tradicional"
 // Declarando e inicializando um objeto já com propriedades
 // - propriedade -> 
 let pessoa3 = {
-    nome: 'João das Couves',
+    nome: 'João das Couves', 
     naturalidade: 'Franca/SP',
     "data de nascimento": '1997-11-03',
     estudante_fatec: true
@@ -18,7 +18,7 @@ console.log(pessoa3.estudante_fatec)
 
 //Acessando uma propriedade composta por várias palavras ->
 // sintaxe dos colchetes
-console.log(pessoa3["data de nascimento"]
+console.log(pessoa3["data de nascimento"])
 
 // Sintaxe dos colchetes  SEMPRE funciona. mesmo com propriedades
 // Cujo nome é uma única palavra
@@ -56,7 +56,11 @@ for(let atrib in pessoa3){
 
     // Usando string template
     console.log(`Atributo: ${atrib}; valor: ${pessoa3[atrib]}`)
+    console.log(`${atrib} ${pessoa3[atrib]}`);
+    
 }
+
+
 
 console.log('--------------------------------------------------------')
 
