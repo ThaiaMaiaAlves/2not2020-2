@@ -50,6 +50,7 @@ for(let prop in pessoa3) {
     console.log(prop)
 }
 
+
 // Listando atributo e valor de um objeto usando for..in
 for(let atrib in pessoa3){
     //console.log('Atributo: ' + atrib + '; valor: ' + pessoa3[atrib])

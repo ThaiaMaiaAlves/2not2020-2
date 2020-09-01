@@ -27,6 +27,11 @@ let estado1 = {
    populacao: 2278308   // Aqui não inserimos vírgula pois é o último atributo
 }
 
+/*
+   1) Crie objetos para os demais Estados, segundo o modelo acima, e acrescente-os
+      ao vetor estadosNe usando push().
+*/
+
 let estado2 = {
     nome: 'Alagoas',
     sigla: 'AL',
@@ -94,13 +99,6 @@ estadosNe.push(estado9)
 
 console.log(estadosNe)
 
-
-
-/*
-   1) Crie objetos para os demais Estados, segundo o modelo acima, e acrescente-os
-      ao vetor estadosNe usando push().
-*/
-
 /*
    2) Escreva uma arrow function que receba dois parâmetros, área e população, e
       calcule a densidade demográfica retornando o resultado da divisão da
@@ -118,7 +116,7 @@ let densidade_demografica = (area, populacao) => populacao / area;
 
 */
 // o "for" é usado para executar uma ação em cada posição de uma vetor, que isso aconteça um de cada vez.
-// densidadeDemograf é a minha variável
+// densidade é a minha variável
 // densidade_demografica é a minha função
 // estadosNe é o (Array) é o vetor
 // [i] é o índice que indica a posição do vetor
@@ -128,19 +126,37 @@ for (let i = 0; i < estadosNe.length; i++) {
     estadosNe[i]['densidade demografica'] = densidade
     delete estadosNe[i].sigla
 }
-    console.log(estadosNe);
-    
-    
+    console.log(estadosNe)     
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
-
 */
-
-
-
+/*
+for (let i = 0; i < estadosNe.length; i++) {
+    for(let atrib in estadosNe[i]) {
+        //console.log(`propriedade: ${prop} , valor: ${np[prop]}`)
+       //console.log('Atributo: ' + atrib + '; valor: ' + estadosNe[i][atrib]);
+       console.log(`Atributo: ${atrib}, valor:${estadosNe[i][atrib]}`)        
+    }
+    console.log ('--------------------------------------------') 
+}
+/*
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
+*/
+/*
+let exibirPropriedades = estado => {
+    for (let prop in estado) {        
+    }
+}
+
+for(let estadosNe[0] of estadosNe.length {
+        console.log(exibirPropriedades)       
+    }
+    console.log ('--------')
+}
+
+*/   
 
 /*
    6)
@@ -153,4 +169,12 @@ for (let i = 0; i < estadosNe.length; i++) {
          O terceiro Estado (Rio Grande do Norte) deve ser inserido entre os dois 
          já existentes, e assim por diante.
 
-*/
+*/ 
+vetor1 = []
+vetor 1 = ('Sergipe' , 'Alagoas', 'Rio Grande do Norte', 'Paraíba', 'Pernambuco',
+'Ceará', 'Piauí', 'Maranhão', 'Bahia')
+ console.log(vetor1)
+ 
+
+
+
