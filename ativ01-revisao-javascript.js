@@ -121,6 +121,7 @@ let densidade_demografica = (area, populacao) => populacao / area;
 // estadosNe é o (Array) é o vetor
 // [i] é o índice que indica a posição do vetor
 // ".area" e ".populacao" são as propriedades do objeto estadosNe
+
 for (let i = 0; i < estadosNe.length; i++) {
     let densidade = densidade_demografica (estadosNe[i].area, estadosNe[i].populacao)
     estadosNe[i]['densidade demografica'] = densidade
@@ -131,6 +132,17 @@ for (let i = 0; i < estadosNe.length; i++) {
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 */
+
+//NÃO ENTENDI ARROW FUNCTION
+console.log ('Exercício 4')
+
+let novoobjeto = estado => {
+    for (let prop in estado) {
+        console.log(`propriedade: ${prop}, valor:${estado[prop]}`)
+    }
+console.log(novoobjeto)
+}
+
 /*
 for (let i = 0; i < estadosNe.length; i++) {
     for(let atrib in estadosNe[i]) {
@@ -140,15 +152,13 @@ for (let i = 0; i < estadosNe.length; i++) {
     }
     console.log ('--------------------------------------------') 
 }
-/*
+*/
+
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
 */
 /*
-let exibirPropriedades = estado => {
-    for (let prop in estado) {        
-    }
-}
+
 
 for(let estadosNe[0] of estadosNe.length {
         console.log(exibirPropriedades)       
@@ -157,7 +167,7 @@ for(let estadosNe[0] of estadosNe.length {
 }
 
 */   
-
+console.log ('--- Exercício 6 ---')
 /*
    6)
       a) Declare um vetor vazio.
@@ -169,12 +179,22 @@ for(let estadosNe[0] of estadosNe.length {
          O terceiro Estado (Rio Grande do Norte) deve ser inserido entre os dois 
          já existentes, e assim por diante.
 
-*/ 
-vetor1 = []
-vetor 1 = ('Sergipe' , 'Alagoas', 'Rio Grande do Norte', 'Paraíba', 'Pernambuco',
-'Ceará', 'Piauí', 'Maranhão', 'Bahia')
- console.log(vetor1)
- 
+*/
+// Criação do vetor vazio
+vetor = []
+
+//Inserção dos nomes dos estados
+vetor.push('Sergipe')
+vetor.unshift('Alagoas')
+vetor.splice(1,0,'Rio Grande do Norte')
+vetor.splice(1, 0, 'Paraíba')
+vetor.splice(2, 0, 'Pernambuco')
+vetor.splice(1, 0, 'Ceará')
+vetor.splice(4, 0, 'Piauí')
+vetor.splice(2, 0, 'Maranhão')
+vetor.splice(1,0, 'Bahia')
+console.log(vetor)
+
 
 
 

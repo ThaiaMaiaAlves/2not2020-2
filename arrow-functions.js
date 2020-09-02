@@ -17,7 +17,7 @@ console.log(imc2(87, 1.78))
 
 //Situação alternativa 3: funções com mais de uma linha no corpo
 
-// Finção tradicional
+// Função tradicional
 let fatorial = function(n) {
     let res = 1
     for(let i = n; 1 > 1; i--) {
