@@ -16,10 +16,15 @@
 */
 
 // "estadosNe" é um array, que nada mais é que um vetor, ou uma lista.
+// forma tradicional: let estadosNe = Array()
 let estadosNe = []
 
-//nome, sigla, area, populacao = chamamos de atributos
-//'Sergipe', 'SE', 21915.08 e 2278308 = chamamos de valor
+//nome, sigla, area, populacao = chamamos de "atributos"
+//'Sergipe', 'SE', 21915.08 e 2278308 = chamamos de "valor"
+/*Tudo que esta entre chaves é o "objeto". Tudo que está dentro do objeto é chamado através do nome, 
+do let que atribuo a ele.
+*/
+// Lista é um conjunto de dados e a organização através de índices.
 let estado1 = {
    nome: 'Sergipe',
    sigla: 'SE',
@@ -31,7 +36,7 @@ let estado1 = {
    1) Crie objetos para os demais Estados, segundo o modelo acima, e acrescente-os
       ao vetor estadosNe usando push().
 */
-
+console.log ('--- Exercício 1 ---')
 let estado2 = {
     nome: 'Alagoas',
     sigla: 'AL',
@@ -87,6 +92,9 @@ let estado9 = {
     area: 564733.18,
     populacao: 14812617 
 }
+/*O .push indica uma função que será executada no vetor estadosNe e conforme a regra do javaScript
+em seguida deve vir o () por ser uma função, por isso .push()
+*/
 estadosNe.push(estado1)
 estadosNe.push(estado2)
 estadosNe.push(estado3)
@@ -99,13 +107,21 @@ estadosNe.push(estado9)
 
 console.log(estadosNe)
 
+console.log ('--- Exercício 2 ---')
 /*
    2) Escreva uma arrow function que receba dois parâmetros, área e população, e
       calcule a densidade demográfica retornando o resultado da divisão da
       segunda pela primeira. pop/ área
 */
+
+// O "=>"" que é responsável por ocultar os nomes "function" e return
+/*let densidade_demografica = function(area, populacao){
+    return populacao / area
+}
+*/
 let densidade_demografica = (area, populacao) => populacao / area;
 
+console.log ('--- Exercício 3 ---')
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
       chame a arrow function criada em 2) e efetue o cálculo correspondente.
@@ -129,6 +145,7 @@ for (let i = 0; i < estadosNe.length; i++) {
 }
     console.log(estadosNe)     
 
+    console.log ('--- Exercício 4 ---')
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 */
@@ -136,15 +153,16 @@ for (let i = 0; i < estadosNe.length; i++) {
 //NÃO ENTENDI ARROW FUNCTION
 console.log ('Exercício 4')
 
-let novoobjeto = estado => {
+
+// A variável novoObjeto está recebendo o parâmetro da função "estado".
+// "estado" é um objeto
+let novoObjeto = estado => {
     for (let prop in estado) {
         console.log(`propriedade: ${prop}, valor:${estado[prop]}`)
     }
-console.log(novoobjeto)
 }
 
-/*
-for (let i = 0; i < estadosNe.length; i++) {
+/*for (let i = 0; i < estadosNe.length; i++) {
     for(let atrib in estadosNe[i]) {
         //console.log(`propriedade: ${prop} , valor: ${np[prop]}`)
        //console.log('Atributo: ' + atrib + '; valor: ' + estadosNe[i][atrib]);
@@ -154,19 +172,16 @@ for (let i = 0; i < estadosNe.length; i++) {
 }
 */
 
+console.log ('--- Exercício 5 ---')
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
-*/
-/*
-
-
-for(let estadosNe[0] of estadosNe.length {
-        console.log(exibirPropriedades)       
-    }
+      */
+     //for..of : percorre o vetor atribuindo o elemento (o objeto) a variável declarada a cada nova iteração.
+for(let objeto of estadosNe) {
+    novoObjeto(objeto)       
     console.log ('--------')
 }
 
-*/   
 console.log ('--- Exercício 6 ---')
 /*
    6)
